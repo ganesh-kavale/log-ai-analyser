@@ -1,0 +1,12 @@
+server:
+  port: 8053
+
+spring:
+  application:
+    name: log-producer
+
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
