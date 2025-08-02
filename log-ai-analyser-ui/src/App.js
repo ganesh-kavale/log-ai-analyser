@@ -1,6 +1,7 @@
 import React from 'react';
 import LogList from './components/LogList';
 import AlertList from './components/AlertList';
+import LogLevelChart from './components/LogLevelChart';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <LogList />
         <AlertList />
       </div>
+      <LogLevelChart />
     </div>
   );
 }

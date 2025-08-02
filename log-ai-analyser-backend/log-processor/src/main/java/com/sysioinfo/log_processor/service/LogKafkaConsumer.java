@@ -23,10 +23,13 @@ public class LogKafkaConsumer {
     public void consume(String message) {
         try {
             LogMessage log = objectMapper.readValue(message, LogMessage.class);
-            redisService.saveLog(log);
-            if (aiLogService.isAnomaly(log.getMessage())) {
+            String aiSolution = aiLogService.isAnomaly(log.getMessage());
+
+            if (aiSolution!=null) {
                 redisService.pushAlert(log);
             }
+            log.setSolution(aiSolution);
+            redisService.saveLog(log);
         } catch (Exception e) {
             e.printStackTrace();
         }
