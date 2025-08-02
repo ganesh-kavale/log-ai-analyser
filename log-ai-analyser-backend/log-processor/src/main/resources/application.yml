@@ -13,3 +13,9 @@ spring:
 
 server:
   port: 8064
+
+#openai:
+#  api-key: YOUR_OPENAI_SECRET_KEY
+#  api-url: https://api.openai.com/v1/chat/completions
+
+#GOOGLE_API_KEY:AIzaSyDAga1UBxpXETzYvPVH8yajSdNdtRBu46A     --> NEED TO ADD THIS IN ENV OF INTELLIJ WHILE USING

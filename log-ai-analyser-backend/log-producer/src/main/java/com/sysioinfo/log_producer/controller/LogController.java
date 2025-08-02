@@ -35,4 +35,5 @@ public class LogController {
     public List<String> getLatestAlerts() {
         return logService.getLatestAlerts();
     }
+
 }
